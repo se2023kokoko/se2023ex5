@@ -1,15 +1,16 @@
 // 2の6乗を計算する。
 #include <stdio.h>
-int f1(int roop);
-int f1(int roop) {
+int f1(int roop, int result);
+int f1(int roop, int result) {
   if (roop < 1) {
-    return 1;
+    return result;
   } else {
-    return 2 * f1(roop - 1);
+    return f1(roop - 1, 2 * result);
   }
 }
 int main(void) {
   int roop = 6;
-  printf("%d\n", f1(roop));
+  int result = 1;
+  printf("%d\n", f1(roop, result));
   return 0;
 }
