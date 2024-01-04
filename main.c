@@ -2,6 +2,12 @@
 #include <stdio.h>
 
 int main(void) {
-  printf("%d\n", 2 * 2 * 2 * 2 * 2 * 2);
+  int result = 1;
+  int roop = 6;
+  while (roop > 0) {
+    result *= 2;
+    roop--;
+  }
+  printf("%d\n", result);
   return 0;
 }
